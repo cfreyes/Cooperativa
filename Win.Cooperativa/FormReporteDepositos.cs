@@ -28,8 +28,7 @@ namespace Win.Cooperativa
             bindingSource2.DataSource = _tiposBL.ObtenerTipos();
 
             var reporte = new ReporteDepositos();
-            reporte.Database.Tables["Depositos"].SetDataSource(bindingSource1);
-            reporte.Database.Tables["Tipo"].SetDataSource(bindingSource2);
+            reporte.SetDataSource(bindingSource1);
 
             crystalReportViewer1.ReportSource = reporte ;
             crystalReportViewer1.RefreshReport();
